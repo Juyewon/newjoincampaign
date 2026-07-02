@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+    <title>2026 동행 가입 추천 캠페인 | 7월은 징검다리의 달</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dh-orange': '#FD9120',
+                        'dh-yellow': '#FFE193',
+                        'dh-cyan': '#55D1EC',
+                        'dh-blue': '#29A9E0',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Pretendard Font -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+    <style>
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            word-break: keep-all; /* 한글 줄바꿈을 단어 단위로 자연스럽게 처리 */
+        }
+        /* 아코디언 및 애니메이션 효과 */
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .faq-active .faq-content {
+            max-height: 350px;
+        }
+        .faq-active .faq-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased leading-relaxed overflow-x-hidden">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
+        <div class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-1.5 md:gap-2">
+                <!-- 동행 심볼 로고 마크 (Flat SVG) -->
+                <svg class="w-7 h-7 md:w-8 md:h-8 text-dh-blue shrink-0" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="10" stroke-linecap="round"/>
+                    <path d="M30 50C40 35 60 35 70 50C60 65 40 65 30 50Z" fill="#55D1EC"/>
+                    <circle cx="50" cy="50" r="8" fill="currentColor"/>
+                </svg>
+                <span class="font-bold text-sm md:text-lg tracking-tight text-slate-900 whitespace-nowrap">
+                    공익활동가 사회적협동조합 <span class="text-dh-blue">동행</span>
+                </span>
+            </div>
+            <a href="https://www.activistcoop.org/336" target="_blank" class="text-xs font-bold text-white bg-dh-blue px-3.5 py-2 rounded-full hover:bg-opacity-90 transition active:scale-95 shrink-0 whitespace-nowrap">
+                조합 가입하기
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-gradient-to-br from-[#29A9E0]/5 via-[#55D1EC]/5 to-[#FFE193]/10 py-10 md:py-20 overflow-hidden">
+        <!-- 배경 기하학적 데코 -->
+        <div class="absolute top-10 right-[-10%] w-72 h-72 rounded-full bg-dh-cyan/10 blur-3xl"></div>
+        <div class="absolute bottom-5 left-[-10%] w-72 h-72 rounded-full bg-dh-orange/5 blur-3xl"></div>
+
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white text-dh-orange text-xs font-extrabold shadow-sm border border-dh-orange/20 mb-4 md:mb-6">
+                🗓️ 2026 가입 추천 캠페인 (7.6 ~ 8.31)
+            </span>
+            <h1 class="text-2xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-4">
+                7월은 <span class="text-dh-blue relative inline-block">징검다리<span class="absolute bottom-1 left-0 w-full h-2.5 bg-dh-yellow/70 -z-10"></span></span>의 달<br class="md:hidden"> "동료와 동행하기"
+            </h1>
+            <p class="text-sm md:text-lg text-slate-600 font-medium max-w-xl mx-auto mb-6 md:mb-8 leading-relaxed">
+                늘 곁에서 묵묵히 땀 흘리는 동료 활동가에게<br>
+                서로가 서로의 우산이 되어주는 단단한 안전망, <strong class="text-slate-800">동행</strong>을 소개해 주세요.
+            </p>
+
+            <!-- Flat Illustration (징검다리 교감 그래픽 - 모바일 깨짐 방지 shrink-0 적용) -->
+            <div class="w-full max-w-md mx-auto mb-6 md:mb-8 bg-white p-4 md:p-6 rounded-2xl shadow-md border border-slate-100/80 flex flex-col items-center justify-center">
+                <div class="flex items-center justify-between w-full gap-2 md:gap-4">
+                    <!-- 활동가 A -->
+                    <div class="flex flex-col items-center shrink-0">
+                        <div class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#29A9E0]/10 flex items-center justify-center mb-1.5 shrink-0">
+                            <!-- 일상복을 입은 편안한 느낌의 SVG 아바타 -->
+                            <svg class="w-7 h-7 md:w-9 md:h-9 text-dh-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        </div>
+                        <span class="text-[10px] md:text-xs font-bold text-slate-400">기존 조합원</span>
+                        <span class="text-xs md:text-sm font-extrabold text-dh-blue mt-0.5">징검다리</span>
+                    </div>
+
+                    <!-- 징검다리 화살표 및 보상 정보 -->
+                    <div class="flex-1 flex flex-col items-center relative min-w-[80px]">
+                        <span class="absolute -top-7 text-[8px] md:text-[11px] font-extrabold text-dh-orange bg-orange-50 px-1.5 md:px-2.5 py-0.5 rounded-full border border-dh-orange/20 whitespace-nowrap scale-90 md:scale-100">
+                            음료 기프티콘 2매
+                        </span>
+                        <div class="w-full flex items-center">
+                            <div class="h-0.5 bg-dh-cyan flex-1 rounded-l"></div>
+                            <div class="w-2 h-2 rounded-full bg-dh-orange shrink-0"></div>
+                            <div class="h-0.5 bg-dh-blue flex-1 rounded-r"></div>
+                        </div>
+                        <span class="text-[9px] md:text-[11px] font-bold text-slate-400 mt-1">안전망 잇기</span>
+                    </div>
+
+                    <!-- 활동가 B -->
+                    <div class="flex flex-col items-center shrink-0">
+                        <div class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#55D1EC]/10 flex items-center justify-center mb-1.5 shrink-0">
+                            <!-- 일상복을 입은 편안한 느낌의 SVG 아바타 -->
+                            <svg class="w-7 h-7 md:w-9 md:h-9 text-dh-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <span class="text-[10px] md:text-xs font-bold text-slate-400">동료 활동가</span>
+                        <span class="text-xs md:text-sm font-extrabold text-dh-cyan mt-0.5">든든한 내 편</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Primary -->
+            <div class="flex flex-col sm:flex-row gap-3 justify-center items-center w-full max-w-md mx-auto">
+                <a href="#recommend-box" class="w-full px-5 py-4 bg-dh-blue text-white font-extrabold text-sm md:text-base rounded-xl shadow-lg shadow-dh-blue/20 hover:bg-opacity-95 transform active:scale-95 transition text-center">
+                    👉 지금 바로 추천 문구 복사하기
+                </a>
+                <a href="#how-to" class="w-full px-5 py-4 bg-white text-slate-700 font-bold text-sm md:text-base rounded-xl border border-slate-200 hover:bg-slate-50 transition text-center">
+                    캠페인 참여 가이드 확인
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY DONGHANG (안전망 가치 공유) -->
+    <section class="py-12 md:py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-8 md:mb-10">
+                <h2 class="text-xl md:text-3xl font-black text-slate-900 tracking-tight">
+                    왜 <span class="text-dh-blue">동행 안전망</span>이 필요할까요?
+                </h2>
+                <p class="text-xs md:text-base text-slate-500 mt-2 max-w-md mx-auto">세상의 변화를 만드는 공익활동가, 하지만 활동가의 일상은 위태로울 때가 많습니다.</p>
+            </div>
+
+            <!-- PDF 통계 및 가치 요약 그리드 (Text < 30% 제약 준수) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- 지표 카드 1 -->
+                <div class="p-4 md:p-5 rounded-2xl bg-slate-50 border border-slate-100 flex items-start gap-3.5">
+                    <div class="w-10 h-10 rounded-xl bg-[#29A9E0]/10 flex items-center justify-center shrink-0">
+                        <span class="text-lg">🩺</span>
+                    </div>
+                    <div>
+                        <h3 class="font-extrabold text-slate-900 text-sm md:text-base mb-1">높은 미충족 의료율</h3>
+                        <p class="text-xs md:text-sm text-slate-600 leading-snug">
+                            활동가들의 병의원 미충족 의료율이 일반 집단 대비 약 <strong class="text-dh-blue">3~4배</strong> 높습니다. 경제적·시간적 한계를 극복하기 위해 건강검진 및 긴급의료비를 지원합니다.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 지표 카드 2 -->
+                <div class="p-4 md:p-5 rounded-2xl bg-slate-50 border border-slate-100 flex items-start gap-3.5">
+                    <div class="w-10 h-10 rounded-xl bg-[#55D1EC]/10 flex items-center justify-center shrink-0">
+                        <span class="text-lg">🫂</span>
+                    </div>
+                    <div>
+                        <h3 class="font-extrabold text-slate-900 text-sm md:text-base mb-1">상호 지지망 형성</h3>
+                        <p class="text-xs md:text-sm text-slate-600 leading-snug">
+                            활동가 설문조사 결과, 주변 사람에 대한 동행 추천 지수 <strong class="text-dh-cyan">9.25점</strong>! 동행은 심리 상담, 여행 및 재충전을 입체적으로 지지합니다.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 지표 카드 3 -->
+                <div class="p-4 md:p-5 rounded-2xl bg-slate-50 border border-slate-100 flex items-start gap-3.5">
+                    <div class="w-10 h-10 rounded-xl bg-[#FD9120]/10 flex items-center justify-center shrink-0">
+                        <span class="text-lg">💵</span>
+                    </div>
+                    <div>
+                        <h3 class="font-extrabold text-slate-900 text-sm md:text-base mb-1">금융 및 상호부조 지원</h3>
+                        <p class="text-xs md:text-sm text-slate-600 leading-snug">
+                            불안정한 자원을 메우는 상호 자조 기금을 마련하고, 긴급 생활비 저금리 소액 대출과 상호부조(경조사비) 체계를 갖추고 있습니다.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 지표 카드 4 -->
+                <div class="p-4 md:p-5 rounded-2xl bg-slate-50 border border-slate-100 flex items-start gap-3.5">
+                    <div class="w-10 h-10 rounded-xl bg-[#FFE193]/30 flex items-center justify-center shrink-0">
+                        <span class="text-lg">🌿</span>
+                    </div>
+                    <div>
+                        <h3 class="font-extrabold text-slate-900 text-sm md:text-base mb-1">지속가능한 연대</h3>
+                        <p class="text-xs md:text-sm text-slate-600 leading-snug">
+                            "힘든 것을 무리해서 넘기는 것은 끝이 없습니다." 동행은 일하는 동안 몸과 마음의 건강을 챙기고 오래 일할 수 있는 연대의 비빌 언덕이 됩니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW TO PARTICIPATE (참여 가이드) -->
+    <section id="how-to" class="py-12 md:py-16 bg-[#55D1EC]/5 border-t border-b border-slate-100">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-8 md:mb-10">
+                <span class="text-dh-blue text-xs font-black tracking-widest uppercase">EASY GUIDE</span>
+                <h2 class="text-xl md:text-3xl font-black text-slate-900 mt-1 tracking-tight">
+                    캠페인 참여 방법, 참 간단해요!
+                </h2>
+            </div>
+
+            <!-- 가이드 단계별 카드 레이아웃 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+                <!-- 단계 1 -->
+                <div class="bg-white p-5 md:p-6 rounded-2xl border border-slate-200 relative flex flex-col justify-between">
+                    <div>
+                        <div class="absolute -top-3 left-6 w-7 h-7 rounded-full bg-dh-blue text-white font-black text-sm flex items-center justify-center">1</div>
+                        <h3 class="font-black text-slate-900 text-base md:text-lg mb-2 mt-2">가입 및 링크 전달</h3>
+                        <p class="text-xs md:text-sm text-slate-500 leading-relaxed">
+                            추천해주고 싶은 동료에게 <strong class="text-slate-700">추천 문구</strong>와 함께 가입 링크를 보냅니다.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-dh-blue font-bold">
+                        <span>추천 문구 복사 필수!</span>
+                        <span>✔️</span>
+                    </div>
+                </div>
+
+                <!-- 단계 2 -->
+                <div class="bg-white p-5 md:p-6 rounded-2xl border border-slate-200 relative flex flex-col justify-between">
+                    <div>
+                        <div class="absolute -top-3 left-6 w-7 h-7 rounded-full bg-dh-cyan text-white font-black text-sm flex items-center justify-center">2</div>
+                        <h3 class="font-black text-slate-900 text-base md:text-lg mb-2 mt-2">가입 조건 충족</h3>
+                        <p class="text-xs md:text-sm text-slate-500 leading-relaxed">
+                            동료가 가입 시 필수 납부 항목인 <strong class="text-slate-700">출자금 및 월조합비 납부</strong>를 완수할 수 있도록 챙겨주세요!
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-dh-cyan font-bold">
+                        <span>출자금/조합비 필수</span>
+                        <span>✔️</span>
+                    </div>
+                </div>
+
+                <!-- 단계 3 -->
+                <div class="bg-white p-5 md:p-6 rounded-2xl border border-slate-200 relative flex flex-col justify-between">
+                    <div>
+                        <div class="absolute -top-3 left-6 w-7 h-7 rounded-full bg-dh-orange text-white font-black text-sm flex items-center justify-center">3</div>
+                        <h3 class="font-black text-slate-900 text-base md:text-lg mb-2 mt-2">추천인 정보 입력</h3>
+                        <p class="text-xs md:text-sm text-slate-500 leading-relaxed">
+                            동료가 가입할 때 가입 페이지의 <strong class="text-slate-700">[추천인]</strong> 칸에 조합원님의 <strong class="text-dh-blue">[이름+전화번호 뒷자리]</strong>를 적었는지 확인!
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-dh-orange font-bold">
+                        <span>식별 정보 오타 주의!</span>
+                        <span>✔️</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BRIDGE REWARD (징검다리 지원금 세부 가이드) -->
+    <section class="py-12 md:py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="bg-gradient-to-br from-[#29A9E0]/5 via-white to-[#FFE193]/10 p-5 md:p-10 rounded-3xl border border-dh-blue/20 shadow-xl shadow-dh-blue/5">
+                <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-6 md:mb-8">
+                    <div>
+                        <span class="text-[10px] md:text-xs font-black text-dh-orange bg-orange-50 px-3 py-1 rounded-full border border-dh-orange/20">SPECIAL REWARD</span>
+                        <h2 class="text-xl md:text-3xl font-black text-slate-900 mt-2 tracking-tight">
+                            동행이 준비한 <span class="text-dh-blue">징검다리 지원금</span>
+                        </h2>
+                        <p class="text-xs text-slate-500 mt-1">캠페인 기간 동안 최소 1명 이상 추천을 완료하신 조합원님께 드려요!</p>
+                    </div>
+                    <div class="bg-white px-3.5 py-2.5 rounded-xl border border-slate-100 flex items-center gap-2 shrink-0 shadow-sm w-full lg:w-auto">
+                        <span class="text-2xl">☕️</span>
+                        <div>
+                            <span class="block text-[9px] text-dh-orange font-bold">선착순 50인 한정</span>
+                            <span class="font-extrabold text-slate-950 text-xs md:text-sm">음료 기프티콘 2매</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 지원금 수령 및 활용 단계 플로우 (모바일 1열, PC 4열 자동 대응) -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+                    <div class="bg-white/80 p-4 rounded-xl border border-slate-200/50">
+                        <span class="text-xs font-bold text-dh-cyan">Step 01</span>
+                        <h4 class="font-black text-slate-950 text-xs md:text-sm mt-1 mb-1">신청 링크 접속</h4>
+                        <p class="text-[11px] text-slate-500">추천 가입 확인 완료 후 발송되는 알림톡의 신청 링크에 접속합니다.</p>
+                    </div>
+                    <div class="bg-white/80 p-4 rounded-xl border border-slate-200/50">
+                        <span class="text-xs font-bold text-dh-cyan">Step 02</span>
+                        <h4 class="font-black text-slate-950 text-xs md:text-sm mt-1 mb-1">기프티콘 수령</h4>
+                        <p class="text-[11px] text-slate-500">신청 완료일 기준 최대 1주일 이내로 커피 기프티콘 2매가 발송됩니다.</p>
+                    </div>
+                    <div class="bg-white/80 p-4 rounded-xl border border-slate-200/50">
+                        <span class="text-xs font-bold text-dh-cyan">Step 03</span>
+                        <h4 class="font-black text-slate-950 text-xs md:text-sm mt-1 mb-1">소통의 시간</h4>
+                        <p class="text-[11px] text-slate-500">가입한 신규 회원 혹은 주변 동료와 커피를 마시며 동행의 경험을 나눕니다.</p>
+                    </div>
+                    <div class="bg-white/80 p-4 rounded-xl border border-slate-200/50">
+                        <span class="text-xs font-bold text-dh-cyan">Step 04</span>
+                        <h4 class="font-black text-slate-950 text-xs md:text-sm mt-1 mb-1">후기 공유</h4>
+                        <p class="text-[11px] text-slate-500">함께 보낸 시간의 후기 입력 구글폼을 간단하게 채워 제출해 주세요.</p>
+                    </div>
+                </div>
+
+                <!-- 안내 박스 -->
+                <div class="mt-6 p-4 rounded-xl bg-amber-50 border border-amber-200 text-[11px] md:text-xs text-amber-900 flex items-start gap-2.5">
+                    <span class="shrink-0 text-dh-orange">⚠️</span>
+                    <p class="leading-relaxed">
+                        징검다리 지원금은 <strong>신청서 제출 순(선착순 50명)</strong>으로 마감되며, 참여 현황에 따라 캠페인이 조기 종료될 수 있습니다. 최초 조합비와 출자금 납부 완료가 확인된 회원 추천만 인정됩니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RECOMMENDATION BOX (추천 문구 복사 존) -->
+    <section id="recommend-box" class="py-12 md:py-16 bg-slate-50 border-t border-b border-slate-100">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-6 md:mb-8">
+                <span class="text-dh-orange text-xs font-black tracking-widest uppercase">COPY & SHARE</span>
+                <h2 class="text-xl md:text-3xl font-black text-slate-900 mt-1 tracking-tight">
+                    💬 동료에게 바로 보낼 수 있는 추천 문구
+                </h2>
+                <p class="text-xs text-slate-500 mt-2 max-w-sm mx-auto">아래의 정성 가득한 추천 문구를 복사해서 아끼는 동료 활동가에게 바로 카톡이나 문자로 전해보세요!</p>
+            </div>
+
+            <!-- 복사할 템플릿 카드 -->
+            <div class="bg-white rounded-2xl border border-slate-200 p-4 md:p-6 shadow-sm relative">
+                <!-- 복사 안내 툴팁 배너 -->
+                <div id="copy-toast" class="absolute top-4 right-6 bg-dh-orange text-white text-[10px] md:text-xs font-extrabold px-2.5 py-1.5 rounded-lg opacity-0 transition-opacity duration-300 shadow">
+                    복사되었습니다! 🎉
+                </div>
+
+                <div class="bg-[#29A9E0]/5 rounded-xl p-3 md:p-6 mb-4 md:mb-6 border border-slate-100 text-sm md:text-base text-slate-700 leading-relaxed font-medium">
+                    <!-- iOS 줌현상 대응: 모바일 text-base(16px), PC는 자유로이 -->
+                    <textarea id="recommend-text" readonly class="w-full bg-transparent border-none resize-none focus:outline-none focus:ring-0 text-slate-700 h-48 md:h-44 cursor-default selection:bg-dh-blue/20 text-base md:text-base">OO님, 혹시 공익활동가 사회적협동조합 동행이라고 들어보셨어요? 활동가가 서로 돕는 안전망을 만들고, 그 안에서 활동을 지속할 수 있도록 함께 지원하는 곳이에요. 마침 지금 동행에서 신규 가입 캠페인을 하고 있길래 OO님도 함께하시면 좋을 것 같아 소개드려요. 아래 소개자료 한번 둘러보시고, 가입하실 생각 있으시면 추천인에 제 이름이랑 제 전화번호 뒷자리 적어주시면 됩니다 😀
+
+동행 소개 웹툰: https://www.activistcoop.org/416
+동행 가입: https://www.activistcoop.org/336</textarea>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-3 items-center">
+                    <button onclick="copyRecommendText()" class="w-full sm:flex-1 py-4 bg-dh-blue hover:bg-opacity-95 text-white font-extrabold rounded-xl shadow-md transition flex items-center justify-center gap-2 text-sm md:text-base">
+                        <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+                        추천 문구 복사하기
+                    </button>
+                    <a href="https://www.activistcoop.org/416" target="_blank" class="w-full sm:w-auto px-6 py-4 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl transition text-center text-sm">
+                        소개 페이지 보기 ↗
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ (자주 묻는 질문 아코디언) -->
+    <section class="py-12 md:py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-8 md:mb-10">
+                <span class="text-dh-orange text-xs font-black tracking-widest uppercase">FAQ</span>
+                <h2 class="text-xl md:text-3xl font-black text-slate-900 mt-1 tracking-tight">
+                    무엇이든 물어보세요!
+                </h2>
+            </div>
+
+            <div class="space-y-3">
+                <!-- FAQ 1 -->
+                <div class="faq-item border border-slate-200 rounded-2xl bg-white transition hover:border-slate-300">
+                    <button onclick="toggleFaq(this)" class="w-full px-5 py-4 md:py-5 text-left flex items-center justify-between focus:outline-none">
+                        <span class="font-bold text-sm md:text-base text-slate-900 flex items-center gap-2.5">
+                            <span class="text-dh-orange shrink-0">Q.</span> 추천 대상에 제한이 있나요?
+                        </span>
+                        <svg class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-300 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-5 pb-5 text-xs md:text-sm text-slate-600 border-t border-slate-100 pt-3">
+                            조합원 가입 요건에 부합하는 공익활동가라면 누구나 가능합니다. 소속 단체나 직장이 없으신 프리랜서/개인 활동가분들의 경우 조합 심사 시 추가 서류를 제출해 주셔야 할 수도 있습니다.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item border border-slate-200 rounded-2xl bg-white transition hover:border-slate-300">
+                    <button onclick="toggleFaq(this)" class="w-full px-5 py-4 md:py-5 text-left flex items-center justify-between focus:outline-none">
+                        <span class="font-bold text-sm md:text-base text-slate-900 flex items-center gap-2.5">
+                            <span class="text-dh-orange shrink-0">Q.</span> 동료가 가입만 하면 자동 참가가 되나요?
+                        </span>
+                        <svg class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-300 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-5 pb-5 text-xs md:text-sm text-slate-600 border-t border-slate-100 pt-3">
+                            아닙니다! 신규 가입 가입 페이지 작성 시 입력된 <strong class="text-slate-800">[추천인 정보]를 기준</strong>으로 매칭이 진행됩니다. 가입 완료 이후에는 시스템상 임의 수정이 매우 어려우니 가입 단계에서 정확한 이름과 연락처 정보(끝 4자리)가 입력될 수 있도록 확실히 안내해 주시기 바랍니다.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item border border-slate-200 rounded-2xl bg-white transition hover:border-slate-300">
+                    <button onclick="toggleFaq(this)" class="w-full px-5 py-4 md:py-5 text-left flex items-center justify-between focus:outline-none">
+                        <span class="font-bold text-sm md:text-base text-slate-900 flex items-center gap-2.5">
+                            <span class="text-dh-orange shrink-0">Q.</span> 지원금 수령의 기준은 무엇인가요?
+                        </span>
+                        <svg class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-300 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-5 pb-5 text-xs md:text-sm text-slate-600 border-t border-slate-100 pt-3">
+                            기존 조합비 및 출자금 납부 조건이 완료된 추천 건에 대하여, 발송 받으신 구글폼 신청 양식 제출 시간 순으로 <strong class="text-dh-blue">선착순 50명</strong>께 지급됩니다. 지급 결정 후 최대 1주일 내로 조합에 등록된 대표 연락처로 발송해 드립니다.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item border border-slate-200 rounded-2xl bg-white transition hover:border-slate-300">
+                    <button onclick="toggleFaq(this)" class="w-full px-5 py-4 md:py-5 text-left flex items-center justify-between focus:outline-none">
+                        <span class="font-bold text-sm md:text-base text-slate-900 flex items-center gap-2.5">
+                            <span class="text-dh-orange shrink-0">Q.</span> 올해 여름 기간 내에는 추천이 어렵다면?
+                        </span>
+                        <svg class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-300 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-5 pb-5 text-xs md:text-sm text-slate-600 border-t border-slate-100 pt-3">
+                            동행은 2026년을 시작점으로 하여 <strong>매년 정기적으로 7월~8월 시즌</strong>에 동료 가입 추천 징검다리 캠페인을 개최할 예정입니다. 올해 기회가 닿지 않더라도 내년 이맘때에도 든든한 혜택과 함께 찾아올 테니 너무 아쉬워 마세요!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <p class="text-[11px] md:text-sm leading-relaxed mb-6">
+                공익활동가들이 자신의 신념과 신뢰를 온전히 지키며 마음 편히 걸어갈 수 있도록,<br class="hidden md:inline">
+                동행은 항상 곁에서 단단한 울타리이자 든든한 비빌 언덕이 되겠습니다.
+            </p>
+            <div class="flex flex-col gap-2 text-[11px] md:text-xs font-bold text-slate-500 mb-6">
+                <span>공익활동가 사회적협동조합 동행</span>
+                <div class="flex flex-wrap justify-center gap-x-3 gap-y-1">
+                    <span>문의: 📞 02-831-6880</span>
+                    <span class="hidden sm:inline">|</span>
+                    <span>📧 donghang@activistcoop.org</span>
+                </div>
+            </div>
+            <p class="text-[10px] text-slate-600">
+                &copy; 2026 공익활동가 사회적협동조합 동행. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JS INTERACTIONS -->
+    <script>
+        // 아코디언 토글 로직
+        function toggleFaq(button) {
+            const faqItem = button.closest('.faq-item');
+            const isActive = faqItem.classList.contains('faq-active');
+            
+            // 모든 아코디언 리셋
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('faq-active');
+            });
+
+            // 현재 아코디언 토글
+            if (!isActive) {
+                faqItem.classList.add('faq-active');
+            }
+        }
+
+        // 추천 문구 복사 로직 (iframe 및 모바일 가상 클립보드 호환성 유지)
+        function copyRecommendText() {
+            const copyText = document.getElementById("recommend-text");
+            const toast = document.getElementById("copy-toast");
+            
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); // 모바일 기기 완벽 대응
+
+            try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    toast.style.opacity = "1";
+                    setTimeout(() => {
+                        toast.style.opacity = "0";
+                    }, 2000);
+                } else {
+                    alert("복사에 실패했습니다. 텍스트를 직접 길게 눌러 선택 및 복사해 주세요.");
+                }
+            } catch (err) {
+                console.error("복사 오류: ", err);
+                alert("지원하지 않는 기기 환경입니다. 텍스트를 직접 드래그해서 복사해 주세요.");
+            }
+        }
+    </script>
+</body>
+</html>
