@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
@@ -21,26 +22,32 @@
         }
     </script>
     <!-- Pretendard Font -->
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
     <style>
         body {
             font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
-            word-break: keep-all; /* 한글 줄바꿈을 단어 단위로 자연스럽게 처리 */
+            word-break: keep-all;
+            /* 한글 줄바꿈을 단어 단위로 자연스럽게 처리 */
         }
+
         /* 아코디언 및 애니메이션 효과 */
         .faq-content {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease-out;
         }
+
         .faq-active .faq-content {
             max-height: 350px;
         }
+
         .faq-active .faq-icon {
             transform: rotate(180deg);
         }
     </style>
 </head>
+
 <body class="bg-slate-50 text-slate-800 antialiased leading-relaxed overflow-x-hidden">
 
     <!-- HEADER / NAVIGATION -->
@@ -53,24 +60,29 @@
                     공익활동가 사회적협동조합 <span class="text-dh-blue">동행</span>
                 </span>
             </div>
-            <a href="https://www.activistcoop.org/336" target="_blank" class="text-xs font-bold text-white bg-dh-blue px-3.5 py-2 rounded-full hover:bg-opacity-90 transition active:scale-95 shrink-0 whitespace-nowrap">
+            <a href="https://www.activistcoop.org/336" target="_blank"
+                class="text-xs font-bold text-white bg-dh-blue px-3.5 py-2 rounded-full hover:bg-opacity-90 transition active:scale-95 shrink-0 whitespace-nowrap">
                 조합 가입하기
             </a>
         </div>
     </header>
 
     <!-- HERO SECTION -->
-    <section class="relative bg-gradient-to-br from-[#29A9E0]/5 via-[#55D1EC]/5 to-[#FFE193]/10 py-10 md:py-20 overflow-hidden">
+    <section
+        class="relative bg-gradient-to-br from-[#29A9E0]/5 via-[#55D1EC]/5 to-[#FFE193]/10 py-10 md:py-20 overflow-hidden">
         <!-- 배경 기하학적 데코 -->
         <div class="absolute top-10 right-[-10%] w-72 h-72 rounded-full bg-dh-cyan/10 blur-3xl"></div>
         <div class="absolute bottom-5 left-[-10%] w-72 h-72 rounded-full bg-dh-orange/5 blur-3xl"></div>
 
         <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
-            <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white text-dh-orange text-xs font-extrabold shadow-sm border border-dh-orange/20 mb-4 md:mb-6">
+            <span
+                class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white text-dh-orange text-xs font-extrabold shadow-sm border border-dh-orange/20 mb-4 md:mb-6">
                 🗓️ 2026 가입 추천 캠페인 (7.13 ~ 8.31)
             </span>
             <h1 class="text-2xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-4">
-                7월은 <span class="text-dh-blue relative inline-block">징검다리<span class="absolute bottom-1 left-0 w-full h-2.5 bg-dh-yellow/70 -z-10"></span></span>의 달<br class="md:hidden"> "동료와 동행하기"
+                7월은 <span class="text-dh-blue relative inline-block">징검다리<span
+                        class="absolute bottom-1 left-0 w-full h-2.5 bg-dh-yellow/70 -z-10"></span></span>의 달<br
+                    class="md:hidden"> "동료와 동행하기"
             </h1>
             <p class="text-sm md:text-lg text-slate-600 font-medium max-w-xl mx-auto mb-6 md:mb-8 leading-relaxed">
                 늘 곁에서 묵묵히 땀 흘리는 동료 활동가에게<br>
@@ -78,13 +90,19 @@
             </p>
 
             <!-- Flat Illustration (징검다리 교감 그래픽 - 모바일 깨짐 방지 shrink-0 적용) -->
-            <div class="w-full max-w-md mx-auto mb-6 md:mb-8 bg-white p-4 md:p-6 rounded-2xl shadow-md border border-slate-100/80 flex flex-col items-center justify-center">
+            <div
+                class="w-full max-w-md mx-auto mb-6 md:mb-8 bg-white p-4 md:p-6 rounded-2xl shadow-md border border-slate-100/80 flex flex-col items-center justify-center">
                 <div class="flex items-center justify-between w-full gap-2 md:gap-4">
                     <!-- 활동가 A -->
                     <div class="flex flex-col items-center shrink-0">
-                        <div class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#29A9E0]/10 flex items-center justify-center mb-1.5 shrink-0">
+                        <div
+                            class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#29A9E0]/10 flex items-center justify-center mb-1.5 shrink-0">
                             <!-- 일상복을 입은 편안한 느낌의 SVG 아바타 -->
-                            <svg class="w-7 h-7 md:w-9 md:h-9 text-dh-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                            <svg class="w-7 h-7 md:w-9 md:h-9 text-dh-blue" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                            </svg>
                         </div>
                         <span class="text-[10px] md:text-xs font-bold text-slate-400">기존 조합원</span>
                         <span class="text-xs md:text-sm font-extrabold text-dh-blue mt-0.5">징검다리</span>
@@ -92,7 +110,8 @@
 
                     <!-- 징검다리 화살표 및 보상 정보 -->
                     <div class="flex-1 flex flex-col items-center relative min-w-[80px]">
-                        <span class="absolute -top-7 text-[8px] md:text-[11px] font-extrabold text-dh-orange bg-orange-50 px-1.5 md:px-2.5 py-0.5 rounded-full border border-dh-orange/20 whitespace-nowrap scale-90 md:scale-100">
+                        <span
+                            class="absolute -top-7 text-[8px] md:text-[11px] font-extrabold text-dh-orange bg-orange-50 px-1.5 md:px-2.5 py-0.5 rounded-full border border-dh-orange/20 whitespace-nowrap scale-90 md:scale-100">
                             음료 기프티콘 2매
                         </span>
                         <div class="w-full flex items-center">
@@ -105,9 +124,15 @@
 
                     <!-- 활동가 B -->
                     <div class="flex flex-col items-center shrink-0">
-                        <div class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#55D1EC]/10 flex items-center justify-center mb-1.5 shrink-0">
+                        <div
+                            class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#55D1EC]/10 flex items-center justify-center mb-1.5 shrink-0">
                             <!-- 일상복을 입은 편안한 느낌의 SVG 아바타 -->
-                            <svg class="w-7 h-7 md:w-9 md:h-9 text-dh-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <svg class="w-7 h-7 md:w-9 md:h-9 text-dh-cyan" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                                </path>
+                            </svg>
                         </div>
                         <span class="text-[10px] md:text-xs font-bold text-slate-400">동료 활동가</span>
                         <span class="text-xs md:text-sm font-extrabold text-dh-cyan mt-0.5">든든한 내 편</span>
@@ -117,12 +142,49 @@
 
             <!-- CTA Primary -->
             <div class="flex flex-col sm:flex-row gap-3 justify-center items-center w-full max-w-md mx-auto">
-                <a href="#recommend-box" class="w-full px-5 py-4 bg-dh-blue text-white font-extrabold text-sm md:text-base rounded-xl shadow-lg shadow-dh-blue/20 hover:bg-opacity-95 transform active:scale-95 transition text-center">
+                <a href="#recommend-box"
+                    class="w-full px-5 py-4 bg-dh-blue text-white font-extrabold text-sm md:text-base rounded-xl shadow-lg shadow-dh-blue/20 hover:bg-opacity-95 transform active:scale-95 transition text-center">
                     👉 지금 바로 추천 문구 복사하기
                 </a>
-                <a href="#how-to" class="w-full px-5 py-4 bg-white text-slate-700 font-bold text-sm md:text-base rounded-xl border border-slate-200 hover:bg-slate-50 transition text-center">
+                <a href="#how-to"
+                    class="w-full px-5 py-4 bg-white text-slate-700 font-bold text-sm md:text-base rounded-xl border border-slate-200 hover:bg-slate-50 transition text-center">
                     캠페인 참여 가이드 확인
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIVE CAMPAIGN PROGRESS SECTION (실시간 목표 달성률 시각화) -->
+    <section class="py-12 bg-slate-100/50 border-t border-b border-slate-200/60">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 max-w-2xl mx-auto">
+                <div class="flex justify-between items-end mb-4">
+                    <div>
+                        <span class="text-xs font-extrabold text-dh-blue uppercase tracking-wider block mb-1">🏃‍♂️ LIVE
+                            PROGRESS</span>
+                        <h3 class="text-lg md:text-xl font-black text-slate-900 tracking-tight">
+                            캠페인 달성 현황
+                        </h3>
+                    </div>
+                    <!-- 실시간 퍼센트 대형 표시 -->
+                    <div class="text-right">
+                        <span id="progress-percent"
+                            class="text-3xl md:text-4xl font-black text-dh-orange transition-all duration-500">0%</span>
+                    </div>
+                </div>
+
+                <!-- 프로그레스 라인 그래프 (트랙) -->
+                <div class="w-full h-4 bg-slate-100 rounded-full overflow-hidden relative border border-slate-200/50">
+                    <!-- 채워지는 이펙트 바 -->
+                    <div id="progress-bar"
+                        class="h-full bg-gradient-to-r from-dh-cyan to-dh-blue rounded-full w-0 transition-all duration-1000 ease-out shadow-inner">
+                    </div>
+                </div>
+
+                <!-- 하단 메시지 (절대 수치 및 목표 인원 비노출 처리) -->
+                <div class="mt-3 text-xs md:text-sm font-bold text-slate-500 text-center md:text-left">
+                    🌱 목표 달성 시 공익활동가를 위한 <span class="text-dh-blue">징검다리 안전망</span>이 더욱 단단해집니다!
+                </div>
             </div>
         </div>
     </section>
@@ -134,7 +196,8 @@
                 <h2 class="text-xl md:text-3xl font-black text-slate-900 tracking-tight">
                     왜 <span class="text-dh-blue">동행 안전망</span>이 필요할까요?
                 </h2>
-                <p class="text-xs md:text-base text-slate-500 mt-2 max-w-md mx-auto">세상의 변화를 만드는 공익활동가, <br>하지만 활동가의 일상은 위태로울 때가 많습니다.</p>
+                <p class="text-xs md:text-base text-slate-500 mt-2 max-w-md mx-auto">세상의 변화를 만드는 공익활동가, <br>하지만 활동가의 일상은
+                    위태로울 때가 많습니다.</p>
             </div>
 
             <!-- PDF 통계 및 가치 요약 그리드 (Text < 30% 제약 준수) -->
@@ -147,7 +210,8 @@
                     <div>
                         <h3 class="font-extrabold text-slate-900 text-sm md:text-base mb-1">높은 미충족 의료율</h3>
                         <p class="text-xs md:text-sm text-slate-600 leading-snug">
-                            활동가들의 병의원 미충족 의료율이 일반 집단 대비 약 <strong class="text-dh-blue">3~4배</strong> 높습니다. 경제적·시간적 한계를 극복하기 위해 건강검진 및 긴급의료비를 지원합니다.
+                            활동가들의 병의원 미충족 의료율이 일반 집단 대비 약 <strong class="text-dh-blue">3~4배</strong> 높습니다. 경제적·시간적 한계를
+                            극복하기 위해 건강검진 및 긴급의료비를 지원합니다.
                         </p>
                     </div>
                 </div>
@@ -160,7 +224,8 @@
                     <div>
                         <h3 class="font-extrabold text-slate-900 text-sm md:text-base mb-1">상호 지지망 형성</h3>
                         <p class="text-xs md:text-sm text-slate-600 leading-snug">
-                            활동가 설문조사 결과, 주변 사람에 대한 동행 추천 지수 <strong class="text-dh-cyan">9.25점</strong>! 동행은 심리 상담, 여행 및 재충전을 입체적으로 지지합니다.
+                            활동가 설문조사 결과, 주변 사람에 대한 동행 추천 지수 <strong class="text-dh-cyan">9.25점</strong>! 동행은 심리 상담, 여행 및
+                            재충전을 입체적으로 지지합니다.
                         </p>
                     </div>
                 </div>
@@ -207,45 +272,58 @@
             <!-- 가이드 단계별 카드 레이아웃 -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
                 <!-- 단계 1 -->
-                <div class="bg-white p-5 md:p-6 rounded-2xl border border-slate-200 relative flex flex-col justify-between">
+                <div
+                    class="bg-white p-5 md:p-6 rounded-2xl border border-slate-200 relative flex flex-col justify-between">
                     <div>
-                        <div class="absolute -top-3 left-6 w-7 h-7 rounded-full bg-dh-blue text-white font-black text-sm flex items-center justify-center">1</div>
+                        <div
+                            class="absolute -top-3 left-6 w-7 h-7 rounded-full bg-dh-blue text-white font-black text-sm flex items-center justify-center">
+                            1</div>
                         <h3 class="font-black text-slate-900 text-base md:text-lg mb-2 mt-2">가입 및 링크 전달</h3>
                         <p class="text-xs md:text-sm text-slate-500 leading-relaxed">
                             추천해주고 싶은 동료에게 <strong class="text-slate-700">추천 문구</strong>와 함께 가입 링크를 보냅니다.
                         </p>
                     </div>
-                    <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-dh-blue font-bold">
-                        <span>추천 문구를 복사해서 활용해보세요!</span>
+                    <div
+                        class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-dh-blue font-bold">
+                        <span>추천 문구 복사 필수!</span>
                         <span>✔️</span>
                     </div>
                 </div>
 
                 <!-- 단계 2 -->
-                <div class="bg-white p-5 md:p-6 rounded-2xl border border-slate-200 relative flex flex-col justify-between">
+                <div
+                    class="bg-white p-5 md:p-6 rounded-2xl border border-slate-200 relative flex flex-col justify-between">
                     <div>
-                        <div class="absolute -top-3 left-6 w-7 h-7 rounded-full bg-dh-cyan text-white font-black text-sm flex items-center justify-center">2</div>
+                        <div
+                            class="absolute -top-3 left-6 w-7 h-7 rounded-full bg-dh-cyan text-white font-black text-sm flex items-center justify-center">
+                            2</div>
                         <h3 class="font-black text-slate-900 text-base md:text-lg mb-2 mt-2">가입 조건 충족</h3>
                         <p class="text-xs md:text-sm text-slate-500 leading-relaxed">
                             동료가 가입 시 필수 납부 항목인 <strong class="text-slate-700">출자금 및 월조합비 납부</strong>를 완수할 수 있도록 챙겨주세요!
                         </p>
                     </div>
-                    <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-dh-cyan font-bold">
+                    <div
+                        class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-dh-cyan font-bold">
                         <span>출자금/조합비 필수</span>
                         <span>✔️</span>
                     </div>
                 </div>
 
                 <!-- 단계 3 -->
-                <div class="bg-white p-5 md:p-6 rounded-2xl border border-slate-200 relative flex flex-col justify-between">
+                <div
+                    class="bg-white p-5 md:p-6 rounded-2xl border border-slate-200 relative flex flex-col justify-between">
                     <div>
-                        <div class="absolute -top-3 left-6 w-7 h-7 rounded-full bg-dh-orange text-white font-black text-sm flex items-center justify-center">3</div>
+                        <div
+                            class="absolute -top-3 left-6 w-7 h-7 rounded-full bg-dh-orange text-white font-black text-sm flex items-center justify-center">
+                            3</div>
                         <h3 class="font-black text-slate-900 text-base md:text-lg mb-2 mt-2">추천인 정보 입력</h3>
                         <p class="text-xs md:text-sm text-slate-500 leading-relaxed">
-                            동료가 가입할 때 가입 페이지의 <strong class="text-slate-700">[추천인]</strong> 칸에 조합원님의 <strong class="text-dh-blue">[이름+전화번호 뒷자리]</strong>를 적었는지 확인!
+                            동료가 가입할 때 가입 페이지의 <strong class="text-slate-700">[추천인]</strong> 칸에 조합원님의 <strong
+                                class="text-dh-blue">[이름+전화번호 뒷자리]</strong>를 적었는지 확인!
                         </p>
                     </div>
-                    <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-dh-orange font-bold">
+                    <div
+                        class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-dh-orange font-bold">
                         <span>식별 정보 오타 주의!</span>
                         <span>✔️</span>
                     </div>
@@ -257,16 +335,20 @@
     <!-- BRIDGE REWARD (징검다리 지원금 세부 가이드) -->
     <section class="py-12 md:py-16 bg-white">
         <div class="max-w-4xl mx-auto px-4">
-            <div class="bg-gradient-to-br from-[#29A9E0]/5 via-white to-[#FFE193]/10 p-5 md:p-10 rounded-3xl border border-dh-blue/20 shadow-xl shadow-dh-blue/5">
+            <div
+                class="bg-gradient-to-br from-[#29A9E0]/5 via-white to-[#FFE193]/10 p-5 md:p-10 rounded-3xl border border-dh-blue/20 shadow-xl shadow-dh-blue/5">
                 <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-6 md:mb-8">
                     <div>
-                        <span class="text-[10px] md:text-xs font-black text-dh-orange bg-orange-50 px-3 py-1 rounded-full border border-dh-orange/20">SPECIAL REWARD</span>
+                        <span
+                            class="text-[10px] md:text-xs font-black text-dh-orange bg-orange-50 px-3 py-1 rounded-full border border-dh-orange/20">SPECIAL
+                            REWARD</span>
                         <h2 class="text-xl md:text-3xl font-black text-slate-900 mt-2 tracking-tight">
                             동행이 준비한 <span class="text-dh-blue">징검다리 지원금</span>
                         </h2>
                         <p class="text-xs text-slate-500 mt-1">캠페인 기간 동안 최소 1명 이상 추천을 완료하신 조합원님께 드려요!</p>
                     </div>
-                    <div class="bg-white px-3.5 py-2.5 rounded-xl border border-slate-100 flex items-center gap-2 shrink-0 shadow-sm w-full lg:w-auto">
+                    <div
+                        class="bg-white px-3.5 py-2.5 rounded-xl border border-slate-100 flex items-center gap-2 shrink-0 shadow-sm w-full lg:w-auto">
                         <span class="text-2xl">☕️</span>
                         <div>
                             <span class="block text-[9px] text-dh-orange font-bold">선착순 50인 한정</span>
@@ -300,10 +382,12 @@
                 </div>
 
                 <!-- 안내 박스 -->
-                <div class="mt-6 p-4 rounded-xl bg-amber-50 border border-amber-200 text-[11px] md:text-xs text-amber-900 flex items-start gap-2.5">
+                <div
+                    class="mt-6 p-4 rounded-xl bg-amber-50 border border-amber-200 text-[11px] md:text-xs text-amber-900 flex items-start gap-2.5">
                     <span class="shrink-0 text-dh-orange">⚠️</span>
                     <p class="leading-relaxed">
-                        징검다리 지원금은 <strong>신청서 제출 순(선착순 50명)</strong>으로 마감되며, 참여 현황에 따라 캠페인이 조기 종료될 수 있습니다. <br>최초 조합비와 출자금 납부 완료가 확인된 회원 추천만 인정됩니다.
+                        징검다리 지원금은 <strong>신청서 제출 순(선착순 50명)</strong>으로 마감되며, 참여 현황에 따라 캠페인이 조기 종료될 수 있습니다. <br>최초 조합비와
+                        출자금 납부 완료가 확인된 회원 추천만 인정됩니다.
                     </p>
                 </div>
             </div>
@@ -318,30 +402,40 @@
                 <h2 class="text-xl md:text-3xl font-black text-slate-900 mt-1 tracking-tight">
                     💬 동료에게 바로 보낼 수 있는 추천 문구
                 </h2>
-                <p class="text-xs text-slate-500 mt-2 max-w-sm mx-auto">아래의 추천 문구를 복사해서 아끼는 동료 활동가에게 바로 카톡이나 문자로 전해보세요!</p>
+                <p class="text-xs text-slate-500 mt-2 max-w-sm mx-auto">아래의 추천 문구를 복사해서 아끼는 동료 활동가에게 바로 카톡이나 문자로 전해보세요!
+                </p>
             </div>
 
             <!-- 복사할 템플릿 카드 -->
             <div class="bg-white rounded-2xl border border-slate-200 p-4 md:p-6 shadow-sm relative">
                 <!-- 복사 안내 툴팁 배너 -->
-                <div id="copy-toast" class="absolute top-4 right-6 bg-dh-orange text-white text-[10px] md:text-xs font-extrabold px-2.5 py-1.5 rounded-lg opacity-0 transition-opacity duration-300 shadow">
+                <div id="copy-toast"
+                    class="absolute top-4 right-6 bg-dh-orange text-white text-[10px] md:text-xs font-extrabold px-2.5 py-1.5 rounded-lg opacity-0 transition-opacity duration-300 shadow">
                     복사되었습니다! 🎉
                 </div>
 
-                <div class="bg-[#29A9E0]/5 rounded-xl p-3 md:p-6 mb-4 md:mb-6 border border-slate-100 text-sm md:text-base text-slate-700 leading-relaxed font-medium">
+                <div
+                    class="bg-[#29A9E0]/5 rounded-xl p-3 md:p-6 mb-4 md:mb-6 border border-slate-100 text-sm md:text-base text-slate-700 leading-relaxed font-medium">
                     <!-- iOS 줌현상 대응: 모바일 text-base(16px), PC는 자유로이 -->
-                    <textarea id="recommend-text" readonly class="w-full bg-transparent border-none resize-none focus:outline-none focus:ring-0 text-slate-700 h-48 md:h-44 cursor-default selection:bg-dh-blue/20 text-base md:text-base">OO님, 혹시 공익활동가 사회적협동조합 동행이라고 들어보셨어요? 활동가가 서로 돕는 안전망을 만들고, 그 안에서 활동을 지속할 수 있도록 함께 지원하는 곳이에요. 마침 지금 동행에서 신규 가입 캠페인을 하고 있길래 OO님도 함께하시면 좋을 것 같아 소개드려요. 아래 소개자료 한번 둘러보시고, 가입하실 생각 있으시면 추천인에 제 이름이랑 제 전화번호 뒷자리 적어주시면 됩니다 😀
+                    <textarea id="recommend-text" readonly
+                        class="w-full bg-transparent border-none resize-none focus:outline-none focus:ring-0 text-slate-700 h-48 md:h-44 cursor-default selection:bg-dh-blue/20 text-base md:text-base">OO님, 혹시 공익활동가 사회적협동조합 동행이라고 들어보셨어요? 활동가가 서로 돕는 안전망을 만들고, 그 안에서 활동을 지속할 수 있도록 함께 지원하는 곳이에요. 마침 지금 동행에서 신규 가입 캠페인을 하고 있길래 OO님도 함께하시면 좋을 것 같아 소개드려요. 아래 소개자료 한번 둘러보시고, 가입하실 생각 있으시면 추천인에 제 이름이랑 제 전화번호 뒷자리 적어주시면 됩니다 😀
 
 동행 소개 웹툰: https://www.activistcoop.org/416
 동행 가입: https://www.activistcoop.org/336</textarea>
                 </div>
 
                 <div class="flex flex-col sm:flex-row gap-3 items-center">
-                    <button onclick="copyRecommendText()" class="w-full sm:flex-1 py-4 bg-dh-blue hover:bg-opacity-95 text-white font-extrabold rounded-xl shadow-md transition flex items-center justify-center gap-2 text-sm md:text-base">
-                        <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+                    <button onclick="copyRecommendText()"
+                        class="w-full sm:flex-1 py-4 bg-dh-blue hover:bg-opacity-95 text-white font-extrabold rounded-xl shadow-md transition flex items-center justify-center gap-2 text-sm md:text-base">
+                        <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3">
+                            </path>
+                        </svg>
                         추천 문구 복사하기
                     </button>
-                    <a href="https://www.activistcoop.org/416" target="_blank" class="w-full sm:w-auto px-6 py-4 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl transition text-center text-sm">
+                    <a href="https://www.activistcoop.org/416" target="_blank"
+                        class="w-full sm:w-auto px-6 py-4 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl transition text-center text-sm">
                         동행 소개 웹툰 보기 ↗
                     </a>
                 </div>
@@ -362,60 +456,86 @@
             <div class="space-y-3">
                 <!-- FAQ 1 -->
                 <div class="faq-item border border-slate-200 rounded-2xl bg-white transition hover:border-slate-300">
-                    <button onclick="toggleFaq(this)" class="w-full px-5 py-4 md:py-5 text-left flex items-center justify-between focus:outline-none">
+                    <button onclick="toggleFaq(this)"
+                        class="w-full px-5 py-4 md:py-5 text-left flex items-center justify-between focus:outline-none">
                         <span class="font-bold text-sm md:text-base text-slate-900 flex items-center gap-2.5">
                             <span class="text-dh-orange shrink-0">Q.</span> 추천 대상에 제한이 있나요?
                         </span>
-                        <svg class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-300 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <svg class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-300 shrink-0 ml-2"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
                     </button>
                     <div class="faq-content">
                         <div class="px-5 pb-5 text-xs md:text-sm text-slate-600 border-t border-slate-100 pt-3">
-                            조합원 가입 요건에 부합하는 공익활동가라면 누구나 가능합니다. 소속 단체나 직장이 없으신 프리랜서/개인 활동가분들의 경우 조합 심사 시 추가 서류를 제출해 주셔야 할 수도 있습니다.
+                            조합원 가입 요건에 부합하는 공익활동가라면 누구나 가능합니다. 소속 단체나 직장이 없으신 프리랜서/개인 활동가분들의 경우 조합 심사 시 추가 서류를 제출해 주셔야 할
+                            수도 있습니다.
                         </div>
                     </div>
                 </div>
 
                 <!-- FAQ 2 -->
                 <div class="faq-item border border-slate-200 rounded-2xl bg-white transition hover:border-slate-300">
-                    <button onclick="toggleFaq(this)" class="w-full px-5 py-4 md:py-5 text-left flex items-center justify-between focus:outline-none">
+                    <button onclick="toggleFaq(this)"
+                        class="w-full px-5 py-4 md:py-5 text-left flex items-center justify-between focus:outline-none">
                         <span class="font-bold text-sm md:text-base text-slate-900 flex items-center gap-2.5">
                             <span class="text-dh-orange shrink-0">Q.</span> 동료가 가입만 하면 자동 참가가 되나요?
                         </span>
-                        <svg class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-300 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <svg class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-300 shrink-0 ml-2"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
                     </button>
                     <div class="faq-content">
                         <div class="px-5 pb-5 text-xs md:text-sm text-slate-600 border-t border-slate-100 pt-3">
-                            아닙니다! 신규 가입 가입 페이지 작성 시 입력된 <strong class="text-slate-800">[추천인 정보]를 기준</strong>으로 캠페인 참여 여부가 인정됩니다. 가입 완료 이후에는 시스템상 임의 수정이 매우 어려우니 가입 단계에서 정확한 이름과 연락처 정보(끝 4자리)가 입력될 수 있도록 확실히 안내해 주시기 바랍니다.
+                            아닙니다! 신규 가입 가입 페이지 작성 시 입력된 <strong class="text-slate-800">[추천인 정보]를 기준</strong>으로 캠페인 참여
+                            여부가 인정됩니다. 가입 완료 이후에는 시스템상 임의 수정이 매우 어려우니 가입 단계에서 정확한 이름과 연락처 정보(끝 4자리)가 입력될 수 있도록 확실히 안내해
+                            주시기 바랍니다.
                         </div>
                     </div>
                 </div>
 
                 <!-- FAQ 3 -->
                 <div class="faq-item border border-slate-200 rounded-2xl bg-white transition hover:border-slate-300">
-                    <button onclick="toggleFaq(this)" class="w-full px-5 py-4 md:py-5 text-left flex items-center justify-between focus:outline-none">
+                    <button onclick="toggleFaq(this)"
+                        class="w-full px-5 py-4 md:py-5 text-left flex items-center justify-between focus:outline-none">
                         <span class="font-bold text-sm md:text-base text-slate-900 flex items-center gap-2.5">
                             <span class="text-dh-orange shrink-0">Q.</span> 지원금 신청 선착순 기준은 무엇인가요?
                         </span>
-                        <svg class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-300 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <svg class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-300 shrink-0 ml-2"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
                     </button>
                     <div class="faq-content">
                         <div class="px-5 pb-5 text-xs md:text-sm text-slate-600 border-t border-slate-100 pt-3">
-                            기존 조합비 및 출자금 납부 조건이 완료된 추천 건에 대하여, 발송 받으신 구글폼 신청 양식 제출 시간 순으로 <strong class="text-dh-blue">선착순 50명</strong>께 지급됩니다. 지급 결정 후 최대 1주일 내로 조합에 등록된 대표 연락처로 발송해 드립니다.
+                            기존 조합비 및 출자금 납부 조건이 완료된 추천 건에 대하여, 발송 받으신 구글폼 신청 양식 제출 시간 순으로 <strong
+                                class="text-dh-blue">선착순 50명</strong>께 지급됩니다. 지급 결정 후 최대 1주일 내로 조합에 등록된 대표 연락처로 발송해
+                            드립니다.
                         </div>
                     </div>
                 </div>
 
                 <!-- FAQ 4 -->
                 <div class="faq-item border border-slate-200 rounded-2xl bg-white transition hover:border-slate-300">
-                    <button onclick="toggleFaq(this)" class="w-full px-5 py-4 md:py-5 text-left flex items-center justify-between focus:outline-none">
+                    <button onclick="toggleFaq(this)"
+                        class="w-full px-5 py-4 md:py-5 text-left flex items-center justify-between focus:outline-none">
                         <span class="font-bold text-sm md:text-base text-slate-900 flex items-center gap-2.5">
                             <span class="text-dh-orange shrink-0">Q.</span> 참여하고 싶은데 올해는 어려워요.
                         </span>
-                        <svg class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-300 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <svg class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-300 shrink-0 ml-2"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
                     </button>
                     <div class="faq-content">
                         <div class="px-5 pb-5 text-xs md:text-sm text-slate-600 border-t border-slate-100 pt-3">
-                            동행은 2026년을 시작점으로 하여 <strong>매년 정기적으로 7월~8월 시즌</strong>에 동료 가입 추천 징검다리 캠페인을 개최할 예정입니다. 올해 기회가 닿지 않더라도 내년 이맘때에도 찾아올 테니 너무 아쉬워 마세요!
+                            동행은 2026년을 시작점으로 하여 <strong>매년 정기적으로 7월~8월 시즌</strong>에 동료 가입 추천 징검다리 캠페인을 개최할 예정입니다. 올해 기회가
+                            닿지 않더라도 내년 이맘때에도 찾아올 테니 너무 아쉬워 마세요!
                         </div>
                     </div>
                 </div>
@@ -448,11 +568,65 @@
 
     <!-- JS INTERACTIONS -->
     <script>
+        // =====================================================
+        // 구글 스프레드시트 CSV 연동 (GitHub Pages 배포 환경용)
+        // B4 셀(4번째 행, 2번째 열)의 신규 가입자 수를 읽어
+        // 목표 70명 대비 달성률을 계산하여 프로그레스 바에 반영합니다.
+        // =====================================================
+        const GOOGLE_SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTZ11sf8R5_TAWfmh5co4xls3xlSESYApwqF-3czQ7RAW4kTWPDyKYj4fzcCOu82rKhAfKc1S4wG1OD/pub?gid=0&single=true&output=csv';
+        const TARGET_COUNT = 70; // 목표 인원 (화면 비노출, 내부 계산용)
+
+        async function fetchCampaignProgress() {
+            try {
+                // GitHub Pages(https://)에서는 fetch+CSV가 CORS 없이 정상 동작합니다.
+                const response = await fetch(GOOGLE_SHEET_CSV_URL);
+                if (!response.ok) throw new Error('HTTP 오류: ' + response.status);
+
+                const csvText = await response.text();
+                console.log('[캠페인] CSV 수신 성공:\n', csvText);
+
+                // CSV를 행 단위로 분리
+                const rows = csvText.trim().split(/\r?\n/);
+
+                // ★ B2 셀 = 2번째 행(index 1), 2번째 열(index 1) ★
+                // rows[0] → 1행(헤더), rows[1] → 2행
+                let currentCount = 0;
+
+                if (rows.length >= 2) {
+                    const columns = rows[1].split(',').map(c => c.replace(/["']/g, '').trim());
+                    if (columns.length >= 2) {
+                        currentCount = parseInt(columns[1], 10) || 0;
+                        console.log('[캠페인] B2 셀 값 (신규 가입자):', currentCount);
+                    } else {
+                        console.warn('[캠페인] 2번째 행에 2번째 열이 없습니다. CSV 구조를 확인하세요.');
+                    }
+                } else {
+                    console.warn('[캠페인] CSV 행이 2행 미만입니다. 현재 행 수:', rows.length);
+                }
+
+                // 달성률 계산 (최대 100%)
+                const calculatedPercent = Math.min(Math.round((currentCount / TARGET_COUNT) * 100), 100);
+
+                // UI 업데이트
+                document.getElementById('progress-percent').innerText = calculatedPercent + '%';
+                document.getElementById('progress-bar').style.width = calculatedPercent + '%';
+                console.log('[캠페인] 달성률 업데이트:', calculatedPercent + '%');
+
+            } catch (error) {
+                console.error('[캠페인] 데이터 연동 오류:', error);
+                // 오류 시 0% 유지 (UI 붕괴 방지)
+                document.getElementById('progress-percent').innerText = '0%';
+            }
+        }
+
+        // 페이지 로드 시 즉시 실행
+        window.addEventListener('DOMContentLoaded', fetchCampaignProgress);
+
         // 아코디언 토글 로직
         function toggleFaq(button) {
             const faqItem = button.closest('.faq-item');
             const isActive = faqItem.classList.contains('faq-active');
-            
+
             // 모든 아코디언 리셋
             document.querySelectorAll('.faq-item').forEach(item => {
                 item.classList.remove('faq-active');
@@ -468,7 +642,7 @@
         function copyRecommendText() {
             const copyText = document.getElementById("recommend-text");
             const toast = document.getElementById("copy-toast");
-            
+
             copyText.select();
             copyText.setSelectionRange(0, 99999); // 모바일 기기 완벽 대응
 
@@ -489,4 +663,5 @@
         }
     </script>
 </body>
+
 </html>
