@@ -607,6 +607,7 @@
         const GOOGLE_SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTZ11sf8R5_TAWfmh5co4xls3xlSESYApwqF-3czQ7RAW4kTWPDyKYj4fzcCOu82rKhAfKc1S4wG1OD/pub?gid=0&single=true&output=csv';
         const TARGET_COUNT = 70; // 목표 인원 (화면 비노출, 내부 계산용)
 
+        // 글로벌 토스트 알림창 제어 함수
         function showGlobalToast(message, emoji = "✨") {
             const toast = document.getElementById('global-toast');
             const toastText = document.getElementById('global-toast-text');
@@ -618,17 +619,16 @@
             
             toastText.innerHTML = `<span class="mr-1.5">${emoji}</span> ${message}`;
             
-            // 나타나기 스타일 직접 제어 (Tailwind 컴파일 여부와 무관하게 무조건 작동하도록 함)
+            // 스타일 제어로 서서히 등장
             toast.style.opacity = '1';
             toast.style.pointerEvents = 'auto';
             toast.style.transform = 'translate(-50%, 0)';
             
-            // 기존 타이머가 작동 중이면 초기화
             if (window.toastTimeout) {
                 clearTimeout(window.toastTimeout);
             }
             
-            // 3초 후 자동 사라짐
+            // 3초 후 사라짐
             window.toastTimeout = setTimeout(() => {
                 toast.style.opacity = '0';
                 toast.style.pointerEvents = 'none';
