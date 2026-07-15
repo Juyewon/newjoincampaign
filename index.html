@@ -146,15 +146,25 @@
             </p>
 
             <!-- CTA Primary -->
-            <div class="flex flex-col sm:flex-row gap-3 justify-center items-stretch w-full max-w-md mx-auto">
-                <a href="#recommend-box"
-                    class="w-full px-5 py-4 bg-dh-blue text-white font-extrabold text-sm md:text-lg rounded-xl shadow-lg shadow-dh-blue/20 hover:bg-opacity-95 transform active:scale-95 transition flex items-center justify-center text-center">
-                    👉 지금 바로 추천 문구 복사하기
-                </a>
+            <div class="flex flex-col gap-3 justify-center items-stretch w-full max-w-md mx-auto">
+                <!-- 1. 캠페인 참여 가이드 확인 -->
                 <a href="#how-to"
                     class="w-full px-5 py-4 bg-white text-slate-700 font-bold text-sm md:text-lg rounded-xl border border-slate-200 hover:bg-slate-50 transition flex items-center justify-center text-center">
                     캠페인 참여 가이드 확인
                 </a>
+                
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <!-- 2. 추천 문구 복사하기 -->
+                    <a href="#recommend-box"
+                        class="flex-1 px-5 py-4 bg-dh-blue text-white font-extrabold text-sm md:text-base rounded-xl shadow-lg shadow-dh-blue/20 hover:bg-opacity-95 transform active:scale-95 transition flex items-center justify-center text-center">
+                        👉 추천 문구 복사하기
+                    </a>
+                    <!-- 3. 가입 링크 공유하기 -->
+                    <button onclick="shareJoinLink()"
+                        class="flex-1 px-5 py-4 bg-dh-orange text-white font-extrabold text-sm md:text-base rounded-xl shadow-lg shadow-dh-orange/20 hover:bg-opacity-95 transform active:scale-95 transition flex items-center justify-center gap-1.5 text-center">
+                        🔗 가입 링크 공유하기
+                    </button>
+                </div>
             </div>
         </div>
     </section>
@@ -677,6 +687,63 @@
                 console.error("복사 오류: ", err);
                 alert("지원하지 않는 기기 환경입니다. 텍스트를 직접 드래그해서 복사해 주세요.");
             }
+        }
+
+        // =====================================================
+        // 가입 링크 공유 및 PC 환경 클립보드 복사 폴백
+        // =====================================================
+        const SHARE_LINK = 'https://www.activistcoop.org/336';
+        const SHARE_TITLE = '동행 가입 추천 캠페인';
+        const SHARE_TEXT = '동료 활동가를 위한 단단한 안전망, 동행에 가입해 보세요!';
+
+        async function shareJoinLink() {
+            if (navigator.share) {
+                try {
+                    await navigator.share({
+                        title: SHARE_TITLE,
+                        text: SHARE_TEXT,
+                        url: SHARE_LINK,
+                    });
+                } catch (error) {
+                    console.log('공유 취소 또는 오류:', error);
+                }
+            } else {
+                copyTextToClipboard(SHARE_LINK);
+            }
+        }
+
+        function copyTextToClipboard(text) {
+            const tempTextArea = document.createElement("textarea");
+            tempTextArea.value = text;
+            // iOS 줌 현상 방지 및 화면 숨김 처리
+            tempTextArea.style.position = 'fixed';
+            tempTextArea.style.top = '0';
+            tempTextArea.style.left = '0';
+            tempTextArea.style.width = '2em';
+            tempTextArea.style.height = '2em';
+            tempTextArea.style.padding = '0';
+            tempTextArea.style.border = 'none';
+            tempTextArea.style.outline = 'none';
+            tempTextArea.style.boxShadow = 'none';
+            tempTextArea.style.background = 'transparent';
+            
+            document.body.appendChild(tempTextArea);
+            tempTextArea.focus();
+            tempTextArea.select();
+            tempTextArea.setSelectionRange(0, 99999);
+
+            try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    alert("가입 링크가 클립보드에 복사되었습니다!\n원하는 곳(카카오톡 등)에 붙여넣기(Ctrl+V)해서 공유해 보세요. 🎉");
+                } else {
+                    alert("링크 복사에 실패했습니다. 아래 주소를 직접 복사해 주세요:\n" + text);
+                }
+            } catch (err) {
+                console.error("링크 복사 오류:", err);
+                alert("지원하지 않는 기기 환경입니다. 아래 주소를 직접 복사해 주세요:\n" + text);
+            }
+            document.body.removeChild(tempTextArea);
         }
     </script>
 </body>
