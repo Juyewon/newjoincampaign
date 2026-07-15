@@ -50,6 +50,13 @@
 
 <body class="bg-slate-50 text-slate-800 antialiased leading-relaxed overflow-x-hidden">
 
+    <!-- GLOBAL TOAST NOTIFICATION CONTAINER (오작동 방지를 위해 최상단 z-index 9999 강제 적용 및 직접 스타일 제어) -->
+    <div id="global-toast" style="position: fixed; top: 80px; left: 50%; transform: translate(-50%, -10px); opacity: 0; pointer-events: none; z-index: 9999; transition: all 0.3s ease;">
+        <div class="bg-slate-900/95 backdrop-blur-sm text-white px-5 py-3 rounded-xl shadow-xl flex items-center gap-2 border border-white/10 whitespace-nowrap">
+            <span id="global-toast-text" class="text-xs md:text-sm font-bold flex items-center"></span>
+        </div>
+    </div>
+    
     <!-- HEADER / NAVIGATION -->
     <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
         <div class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
